@@ -111,13 +111,13 @@ main {
 
 .title {
   color: rgb(34, 34, 34);
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: 700;
   margin-bottom: 24px;
 }
 
 .row-label {
-  font-size: 12px;
+  font-size: 16px;
   margin-bottom: 8px;
 }
 
@@ -127,7 +127,7 @@ main {
 }
 
 .checkbox-label {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
 }
 .checkbox-input {
@@ -191,7 +191,7 @@ main {
 }
 
 .form-error {
-  font-size: 12px;
+  font-size: 16px;
   margin-top: 8px;
   color: red;
 }
