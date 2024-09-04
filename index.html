@@ -67,13 +67,13 @@
         <div class="row-h">
           <div class="item">
             <span class="row-label">First Name</span>
-            <input type="text" name="first_name" class="hov text-input">
-            <span class="form-error" id="first_name"></span>
+            <input type="text" name="first_name" id="first_name" class="hov text-input">
+            <span class="form-error" id="error_first_name"></span>
           </div>
           <div class="item">
             <span class="row-label">Last Name</span>
-            <input type="text" name="last_name" class="hov text-input">
-            <span class="form-error" id="last_name"></span>
+            <input type="text" name="last_name" id="last_name" class="hov text-input">
+            <span class="form-error" id="error_last_name"></span>
           </div>
         </div>
       </div>  
@@ -82,8 +82,8 @@
         <div class="row-h">
           <div class="item">
             <span class="row-label">Email Address</span>
-            <input type="text" name="email" class="hov text-input">
-            <span class="form-error" id="email"></span>
+            <input type="text" name="email" id="email" class="hov text-input">
+            <span class="form-error" id="error_email"></span>
           </div>
         </div>  
       </div>
@@ -92,38 +92,38 @@
         <span class="row-label">Query Type</span>
         <div class="row-h">
           <div class="radio-item" id="GE">
-            <input type="radio" name="query_type"  value="General Enquiry">
+            <input type="radio" name="query_type" id="query_type"  value="General Enquiry">
             <span class="radio-label" >General Enquiry</span>
           </div>
           <div class="radio-item" id="SR">
-            <input type="radio" name="query_type"  value="General Enquiry">
+            <input type="radio" name="query_type" id="query_type"  value="General Enquiry">
             <span class="radio-label" >Support Request</span>
           </div>
         </div>
-        <span class="form-error" id="query_type"></span>
+        <span class="form-error" id="error_query_type"></span>
       </div>  
         
       <div class="form-row">
         <div class="row-h">
           <div class="item">
             <span class="row-label">Message</span>
-            <textarea name="message" class="hov textarea-input" rows="4"></textarea>
-            <span class="form-error" id="message"></span>
+            <textarea name="message" id="message" class="hov textarea-input" rows="4"></textarea>
+            <span class="form-error" id="error_message"></span>
           </div>
         </div>  
       </div>
       
       <div class="form-row">
         <div class="row-h-consent">
-          <input type="checkbox" name="consent" id="consent" class="hov checkbox-input">
+          <input type="checkbox" name="consent" id="consent" class="hov checkbox-input" value="1">
           <span class="checkbox-label">I consent to being contacted by the team</span>
         </div>  
-        <span class="form-error" id="message"></span>
+        <span class="form-error" id="error_consent"></span>
       </div>
       
       <div class="form-row">
         <div class="row-h">
-          <input type="button" value="Submit" class="submit-btn">
+          <input type="button" value="Submit" class="submit-btn" onclick="handleSubmit()">
         </div>
       </div>
 
