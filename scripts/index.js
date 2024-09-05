@@ -38,10 +38,15 @@ function clearForm() {
 
   fields.forEach((field) => {
     document.getElementById(field).value = ''
+    document.getElementById(field).classList.remove('error')
+    document.getElementById(`error_${field}`).innerHTML = ''
   });
   document
-      .querySelectorAll(".radio-item")
-      .forEach((card) => card.classList.remove("selected"));
+  .querySelectorAll(".radio-item")
+  .forEach((card) => card.classList.remove("selected"));
+  document.getElementById(`error_query_type`).innerHTML = ''
+  document.getElementById(`error_consent`).innerHTML = ''
+      
 }
 
 document.querySelectorAll('input[type="radio"]').forEach((radio) => {
