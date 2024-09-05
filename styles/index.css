@@ -175,12 +175,14 @@ main {
 }
 
 .text-input {
+  border: 1px solid rgb(34, 34, 34);
   border-radius: 8px;
   height: 40px;
   border-width: 1px;
   padding-left: 8px;
 }
 .textarea-input {
+  border: 1px solid rgb(34, 34, 34);
   border-radius: 8px;
   height: 80px;
   border-width: 1px;
