@@ -28,25 +28,30 @@ function showToast() {
   setTimeout(() => { toast.classList.remove("show"); clearForm(); }, 3000);
 }
 
+function clearError() {
+  const fields = ["first_name", "last_name", "email", "message"];
+  fields.forEach((field) => {
+    document.getElementById(field).classList.remove('error')
+    document.getElementById(`error_${field}`).innerHTML = ''
+  });
+  document.getElementById(`error_query_type`).innerHTML = ''
+  document.getElementById(`error_consent`).innerHTML = ''
+}
+
 function clearForm() {
   const fields = ["first_name", "last_name", "email", "message"];
   document.getElementById("query_type_ge").checked = false;
   document.getElementById("query_type_sr").checked = false;
   document.getElementById("consent").checked = false;
 
-  let isValid = true;
-
   fields.forEach((field) => {
     document.getElementById(field).value = ''
-    document.getElementById(field).classList.remove('error')
-    document.getElementById(`error_${field}`).innerHTML = ''
   });
   document
-  .querySelectorAll(".radio-item")
-  .forEach((card) => card.classList.remove("selected"));
-  document.getElementById(`error_query_type`).innerHTML = ''
-  document.getElementById(`error_consent`).innerHTML = ''
-      
+    .querySelectorAll(".radio-item")
+    .forEach((card) => card.classList.remove("selected"));
+
+
 }
 
 document.querySelectorAll('input[type="radio"]').forEach((radio) => {
@@ -64,6 +69,7 @@ function isValidEmail(email) {
 }
 
 function handleSubmit() {
+  clearError()
   const fields = ["first_name", "last_name", "email", "message"];
   const query_type_value =
     document.getElementById("query_type_ge").checked ||
