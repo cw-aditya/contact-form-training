@@ -10,7 +10,7 @@ body {
 
 .toast {
   position: fixed;
-  top: 5%;
+  top: -10%;
   left: calc(50vw - 210px);
   /* transform: translate(-50%, -50%); */
   width: 420px;
@@ -20,12 +20,13 @@ body {
   vertical-align: center;
   padding: 8px;
   border-radius: 8px;
-  visibility: hidden;
+  display: none;
   z-index: 1;
 }
 
 .toast.show {
-  visibility: visible;
+  /* visibility: visible; */
+  display: block;
   position: absolute;
   top: 10%;
   left: 50%;
@@ -34,7 +35,7 @@ body {
   max-height: 300px;
   background-color: #2a4244;
   color: #fff;
-  vertical-align: center;
+  /* vertical-align: center; */
   padding: 8px;
   border-radius: 8px;
   z-index: 2;
@@ -44,11 +45,11 @@ body {
 
 @keyframes fadein {
   from {
-    top: 0;
+    top: -10%;
     opacity: 0;
   }
   to {
-    top: 5%;
+    top: 10%;
     opacity: 1;
   }
 }
@@ -56,11 +57,11 @@ body {
 
 @keyframes fadeout {
   from {
-    top: 5%;
+    top: 10%;
     opacity: 1;
   }
   to {
-    top: 0;
+    top: -10%;
     opacity: 0;
   }
 }
