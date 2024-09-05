@@ -138,6 +138,10 @@ main {
   accent-color: hsl(169, 82%, 27%);
 }
 
+.astrix {
+  color: hsl(169, 82%, 27%);
+}
+
 .form-row {
   margin-bottom: 16px;
 }
