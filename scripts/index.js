@@ -39,6 +39,9 @@ function clearForm() {
   fields.forEach((field) => {
     document.getElementById(field).value = ''
   });
+  document
+      .querySelectorAll(".radio-item")
+      .forEach((card) => card.classList.remove("selected"));
 }
 
 document.querySelectorAll('input[type="radio"]').forEach((radio) => {
